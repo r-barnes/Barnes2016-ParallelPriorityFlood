@@ -24,4 +24,4 @@ def GenGrid(out,northings,eastings,names,suffix):
 with open('pan_tiles.layout','w') as fout:
   GenGrid(fout,pan_northings,pan_eastings,pan_names,'PAN')
 with open('pas_tiles.layout','w') as fout:
-  GenGrid(fout,pas_northings,pas_eastings,pan_names,'PAS')
+  GenGrid(fout,pas_northings,pas_eastings,pas_names,'PAS')
