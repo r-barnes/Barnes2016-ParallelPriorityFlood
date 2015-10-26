@@ -1,0 +1,14 @@
+#!/bin/bash  
+#SBATCH --job-name="pamap_pan"  
+#SBATCH --output="pamap_pan.%j.%N.out"  
+#SBATCH --partition=compute  
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24  
+#SBATCH --export=ALL  
+#SBATCH -t 01:00:00
+
+module load boost/1.55.0
+module load intel/2015.2.164
+module load mvapich2_ib
+
+mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe -V many /oasis/scratch/comet/rbarnes1/temp_project/pan_retain/ /oasis/scratch/comet/rbarnes1/temp_project/pamap/pan_tiles.layout /oasis/scratch/comet/rbarnes1/temp_project/pan_output/              # Run the MPI executable named "a.out"
