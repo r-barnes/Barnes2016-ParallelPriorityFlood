@@ -45,7 +45,6 @@
 ./imgn39w107_13.img
 ./imgn34w082_13.img
 ./imgn35w108_13.img
-./imgn30w091_13.img.xml
 ./imgn35w113_13.img
 ./imgn34w099_13.img
 ./imgn47w099_13.img
@@ -58,7 +57,6 @@
 ./imgn49w089_13.img
 ./imgn48w103_13.img
 ./imgn36w086_13.img
-./imgn30w091_13.img.aux.xml
 ./imgn64w158_13.img
 ./imgn45w086_13.img
 ./imgn48w070_13.img
@@ -129,7 +127,6 @@
 ./imgn49w100_13.img
 ./imgn37w085_13.img
 ./imgn41w079_13.img
-./imgn45w073_13.img.xml
 ./imgn41w124_13.img
 ./imgn34w096_13.img
 ./imgn45w121_13.img
@@ -176,14 +173,12 @@
 ./imgn36w084_13.img
 ./imgn40w078_13.img
 ./imgn32w081_13.img
-./imgn45w073_13.img.aux.xml
 ./imgn42w114_13.img
 ./imgn49w123_13.img
 ./imgn29w104_13.img
 ./imgn46w111_13.img
 ./imgn38w094_13.img
 ./imgn35w111_13.img
-./imgn45w074_13.img.xml
 ./imgn30w085_13.img
 ./imgn39w076_13.img
 ./imgn34w080_13.img
@@ -233,16 +228,13 @@
 ./imgn40w082_13.img
 ./imgn41w108_13.img
 ./imgn44w087_13.img
-./imgn42w092_13.img.xml
 ./imgn50w098_13.img
 ./imgn34w112_13.img
 ./imgn35w098_13.img
 ./imgn25w082_13.img
 ./imgn63w143_13.img
-./imgn38w090_13.img.xml
 ./imgn43w117_13.img
 ./imgn48w120_13.img
-./imgn32w089_13.img.xml
 ./imgn46w098_13.img
 ./imgn47w112_13.img
 ./imgn39w097_13.img
@@ -258,7 +250,6 @@
 ./imgn40w099_13.img
 ./imgn20w156_13.img
 ./imgn39w124_13.img
-./imgn45w074_13.img.aux.xml
 ./imgn33w099_13.img
 ./imgn32w113_13.img
 ./imgn49w119_13.img
@@ -282,26 +273,20 @@
 ./imgn35w117_13.img
 ./imgn34w086_13.img
 ./imgn30w083_13.img
-./imgn34w090_13.img.xml
 ./imgn42w109_13.img
 ./imgn43w083_13.img
 ./imgn38w089_13.img
 ./imgn39w103_13.img
 ./imgn47w086_13.img
-./imgn33w090_13.img.aux.xml
 ./imgn36w099_13.img
 ./imgn37w113_13.img
 ./imgn49w096_13.img
 ./imgn64w147_13.img
 ./imgn33w116_13.img
-./imgn45w122_13.img.aux.xml
-./imgn30w093_13.img.xml
 ./imgn38w121_13.img
-./imgn34w086_13.img.xml
 ./imgn40w116_13.img
 ./imgn44w113_13.img
 ./imgn45w099_13.img
-./imgn42w091_13.img.aux.xml
 ./imgn30w095_13.img
 ./imgn46w069_13.img
 ./imgn34w090_13.img
@@ -312,7 +297,6 @@
 ./imgn33w100_13.img
 ./imgn44w076_13.img
 ./imgn37w105_13.img
-./imgn31w092_13.img.xml
 ./imgn64w151_13.img
 ./imgn44w105_13.img
 ./imgn37w076_13.img
@@ -339,17 +323,13 @@
 ./imgn36w078_13.img
 ./imgn40w084_13.img
 ./imgn63w145_13.img
-./imgn34w087_13.img.aux.xml
-./imgn33w090_13.img.xml
 ./imgn34w114_13.img
-./imgn33w089_13.img.aux.xml
 ./imgn47w114_13.img
 ./imgn39w091_13.img
 ./imgn28w101_13.img
 ./imgn43w111_13.img
 ./imgn42w080_13.img
 ./imgn29w090_13.img
-./imgn31w092_13.img.aux.xml
 ./imgn38w100_13.img
 ./imgn46w085_13.img
 ./imgn43w079_13.img
@@ -386,7 +366,6 @@
 ./imgn37w097_13.img
 ./imgn48w098_13.img
 ./imgn46w120_13.img
-./imgn30w093_13.img.aux.xml
 ./imgn33w092_13.img
 ./imgn35w120_13.img
 ./imgn41w118_13.img
@@ -419,7 +398,6 @@
 ./imgn35w115_13.img
 ./imgn29w100_13.img
 ./imgn42w110_13.img
-./imgn38w089_13.img.aux.xml
 ./imgn46w115_13.img
 ./imgn38w090_13.img
 ./imgn48w105_13.img
@@ -434,7 +412,6 @@
 ./imgn34w089_13.img
 ./imgn42w075_13.img
 ./imgn35w103_13.img
-./imgn34w090_13.img.aux.xml
 ./imgn46w103_13.img
 ./imgn38w086_13.img
 ./imgn47w089_13.img
@@ -478,7 +455,6 @@
 ./imgn18w065_13.img
 ./imgn36w112_13.img
 ./imgn48w097_13.img
-./imgn45w122_13.img.xml
 ./imgn45w112_13.img
 ./imgn44w098_13.img
 ./imgn41w117_13.img
@@ -487,7 +463,6 @@
 ./imgn39w088_13.img
 ./imgn38w102_13.img
 ./imgn46w087_13.img
-./imgn38w090_13.img.aux.xml
 ./imgn43w108_13.img
 ./imgn42w082_13.img
 ./imgn48w124_13.img
@@ -536,7 +511,6 @@
 ./imgn42w094_13.img
 ./imgn38w114_13.img
 ./imgn46w091_13.img
-./imgn34w089_13.img.aux.xml
 ./imgn41w102_13.img
 ./imgn40w088_13.img
 ./imgn45w107_13.img
@@ -665,7 +639,6 @@
 ./imgn34w087_13.img
 ./imgn19w156_13.img
 ./imgn47w087_13.img
-./imgn42w091_13.img.xml
 ./imgn39w102_13.img
 ./imgn38w088_13.img
 ./imgn43w082_13.img
@@ -710,10 +683,8 @@
 ./imgn48w096_13.img
 ./imgn36w113_13.img
 ./imgn37w099_13.img
-./imgn34w087_13.img.xml
 ./imgn27w083_13.img
 ./imgn39w121_13.img
-./imgn30w092_13.img.xml
 ./imgn41w116_13.img
 ./imgn44w099_13.img
 ./imgn45w113_13.img
@@ -749,9 +720,7 @@
 ./imgn45w097_13.img
 ./imgn35w102_13.img
 ./imgn42w074_13.img
-./imgn34w086_13.img.aux.xml
 ./imgn34w088_13.img
-./imgn38w089_13.img.xml
 ./imgn31w107_13.img
 ./imgn46w071_13.img
 ./imgn42w107_13.img
@@ -788,12 +757,10 @@
 ./imgn19w067_13.img
 ./imgn37w110_13.img
 ./imgn64w144_13.img
-./imgn32w089_13.img.aux.xml
 ./imgn33w115_13.img
 ./imgn38w122_13.img
 ./imgn44w078_13.img
 ./imgn32w084_13.img
-./imgn30w092_13.img.aux.xml
 ./imgn36w081_13.img
 ./imgn48w104_13.img
 ./imgn41w084_13.img
@@ -806,7 +773,6 @@
 ./imgn31w085_13.img
 ./imgn38w076_13.img
 ./imgn35w080_13.img
-./imgn44w073_13.img.aux.xml
 ./imgn38w105_13.img
 ./imgn34w079_13.img
 ./imgn42w085_13.img
@@ -850,11 +816,9 @@
 ./imgn34w107_13.img
 ./imgn43w071_13.img
 ./imgn40w124_13.img
-./imgn44w074_13.img.xml
 ./imgn35w096_13.img
 ./imgn44w121_13.img
 ./imgn31w093_13.img
-./imgn34w089_13.img.xml
 ./imgn37w121_13.img
 ./imgn29w083_13.img
 ./imgn43w119_13.img
@@ -905,7 +869,6 @@
 ./imgn38w097_13.img
 ./imgn46w112_13.img
 ./imgn47w098_13.img
-./imgn44w074_13.img.aux.xml
 ./imgn32w094_13.img
 ./imgn36w091_13.img
 ./imgn48w114_13.img
@@ -920,7 +883,6 @@
 ./imgn46w104_13.img
 ./imgn35w077_13.img
 ./imgn42w101_13.img
-./imgn33w089_13.img.xml
 ./imgn36w122_13.img
 ./imgn43w090_13.img
 ./imgn47w095_13.img
@@ -1015,7 +977,6 @@
 ./imgn40w111_13.img
 ./imgn48w068_13.img
 ./imgn44w114_13.img
-./imgn42w092_13.img.aux.xml
 ./imgn34w081_13.img
 ./imgn39w077_13.img
 ./imgn30w084_13.img
@@ -1059,5 +1020,4 @@
 ./imgn48w116_13.img
 ./imgn43w121_13.img
 ./imgn32w096_13.img
-./imgn44w073_13.img.xml
 ./imgn47w124_13.img
