@@ -19,4 +19,19 @@
 
 cd /home/rbarnes1/scratch/srtm_global
 
-find . -iname "*hgt" | xargs -t -n 1 -P 24 -I {} gdalwarp -co 'COMPRESS=DEFLATE' -ts 10803 10803 -ot Int16 {} {}.tif
+#The regex in this expression selects both the input files and the output files.
+#The output filenams are recrafted to look like the input lines. Finally, the
+#list is sorted and only the unique elements passed on. This effectively allows
+#the process to restart if it is interrupted, provided possibly corrupted files
+#are removed per the comment below.
+find . -regex '\(.*hgt\|.*hgt.tif\)' | sed 's/.tif//' | sort | uniq -u | xargs -t -n 1 -P 24 -I {} gdalwarp -co 'COMPRESS=DEFLATE' -ts 10803 10803 -ot Int16 {} {}.tif
+
+#If this crashes part way through, use the following command to figure out what
+#the last files in progress were:
+#    grep -ohE "[SN][0-9][0-9][WE][0-9][0-9][0-9].hgt" logfile_from_above | uniq | tail -n 100
+#
+#You should choose a tail at least as large as the number of processors
+#specified above and, preferrably, larger to account for different speeds of
+#execution. Delete all of the output of the files listed in the tail.
+#
+#
