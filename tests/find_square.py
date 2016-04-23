@@ -16,12 +16,14 @@ def LargestSquareOfOnes(mat):
           bestloc = (y,x)
   return bestval,bestloc
 
-if len(sys.argv)!=2:
-  print("{0} <LAYOUT FILE>".format(sys.argv[0]))
+if len(sys.argv)!=3:
+  print("{0} <genlayout/onlydim> <LAYOUT FILE>".format(sys.argv[0]))
+  print("genlayout = Generate layout files for testing")
+  print("onlydim   = Only output the largest square dimension")
   sys.exit(-1)
 
 
-data = open(sys.argv[1],'r').readlines()
+data = open(sys.argv[2],'r').readlines()
 
 #a = "ned/ned_tiles.layout"
 #data  = open(a,'r').readlines()
@@ -36,11 +38,12 @@ data  = np.array(data)
 
 bestval, bestloc = LargestSquareOfOnes(data)
 
-print("Bestval: {0}".format(bestval))
-
-sys.exit(-1)
-
-for size in range(1,bestval+1):
-  for y in range(bestloc[0],bestloc[0]+size):
-    print(','.join(fgrid[y][bestloc[1]:bestloc[1]+size]))
-  print("\n\n\n")
+if sys.argv[1]=="onlydim":
+  print("{0:43} {1}".format(sys.argv[2],bestval))
+elif sys.argv[1]=="genlayout":
+  for size in range(1,bestval+1):
+    for y in range(bestloc[0],bestloc[0]+size):
+      print(','.join(fgrid[y][bestloc[1]:bestloc[1]+size]))
+    print("\n\n\n")
+else:
+  print("Unrecognised option!")
