@@ -17,9 +17,9 @@ def LargestSquareOfOnes(mat):
   return bestval,bestloc
 
 if len(sys.argv)!=3:
-  print("{0} <genlayout/onlydim> <LAYOUT FILE>".format(sys.argv[0]))
-  print("genlayout = Generate layout files for testing")
-  print("onlydim   = Only output the largest square dimension")
+  print("{0} <prefix/onlydim> <LAYOUT FILE>".format(sys.argv[0]))
+  print("\tprefix  = Prefix for layout files")
+  print("\tonlydim = Only output the largest square dimension")
   sys.exit(-1)
 
 
@@ -40,10 +40,8 @@ bestval, bestloc = LargestSquareOfOnes(data)
 
 if sys.argv[1]=="onlydim":
   print("{0:43} {1}".format(sys.argv[2],bestval))
-elif sys.argv[1]=="genlayout":
-  for size in range(1,bestval+1):
-    for y in range(bestloc[0],bestloc[0]+size):
-      print(','.join(fgrid[y][bestloc[1]:bestloc[1]+size]))
-    print("\n\n\n")
 else:
-  print("Unrecognised option!")
+  for size in range(1,bestval+1):
+    with open(sys.argv[1]+str(size)+".layout",'w') as fout:
+      for y in range(bestloc[0],bestloc[0]+size):
+        fout.write(','.join(fgrid[y][bestloc[1]:bestloc[1]+size])+"\n")
