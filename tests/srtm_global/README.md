@@ -1,17 +1,40 @@
-Acquire data from `http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/` with
-e.g.
+Shuttle Radar Topography Mission (SRTM) DEM
+===========================================
+This is a 30m DEM covering the 80% of Earth's land area.
+
+Stats
+-----
+Cells:       12,967,201  (per tile)
+Dimensions:  3601 x 3601 (per tile)
+Tiles:       14297
+Total cells: 185,392,072,697
+Orientation: Flip tiles vertically and horizontally
+
+
+
+Overview
+--------
+
+
+
+Acquisition
+-----------
+Acquire data from 
+
+    http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/
+
+using, e.g., 
 
     wget -r --no-parent --continue --no-clobber http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/
 
-Information on the dataset is available from:
 
-    https://lpdaac.usgs.gov/dataset_discovery/measures/measures_products_table/srtmgl1
 
-The following prints each available file as a geolocated X on a grid on the
-screen, making a little ASCII map of the world. This is useful for determining
-that we have all of the files.
+Web Resources
+-------------
+ * https://lpdaac.usgs.gov/dataset_discovery/measures/measures_products_table/srtmgl1
 
-    cat srtm_global.layout  | sed 's/[SN]..[EW]....hgt/X/g' | sed 's/  */ /g' | less -S
+
+
 
 To relocate files:
 
