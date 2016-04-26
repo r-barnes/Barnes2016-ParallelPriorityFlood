@@ -1,6 +1,6 @@
 Pennsylvania PAMAP DEM
 ======================
-This is a 3m DEM covering the entire state of Pennsylvania.
+This is a 3m DEM covering the entire state of Pennsylvania. TODO: Resolution check
 
 Stats
 -----
