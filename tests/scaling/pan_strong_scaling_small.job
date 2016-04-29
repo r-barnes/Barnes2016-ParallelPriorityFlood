@@ -1,0 +1,34 @@
+#!/bin/bash  
+#SBATCH --job-name="pan_strong_scaling_small"  
+#SBATCH --output="pan_strong_scaling_small.%j.%N.out"  
+#SBATCH --partition=compute  
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=24  
+#SBATCH --export=ALL  
+#SBATCH -t 15:00:00
+
+module load intel/2015.2.164
+module load mvapich2_ib
+
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pan_output/
+
+mpirun -n 2  /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/pamap/pan-44.layout /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ss2_%n.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pan_output/
+
+mpirun -n 3  /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/pamap/pan-44.layout /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ss3_%n.tif 
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pan_output/
+
+mpirun -n 5  /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/pamap/pan-44.layout /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ss5_%n.tif 
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pan_output/
+
+mpirun -n 9  /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/pamap/pan-44.layout /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ss9_%n.tif 
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pan_output/
+
+mpirun -n 17 /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/pamap/pan-44.layout /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ss17_%n.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pan_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pan_output/

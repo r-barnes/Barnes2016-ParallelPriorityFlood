@@ -1,0 +1,21 @@
+#!/bin/bash  
+#SBATCH --job-name="pas_weak_scaling_large"  
+#SBATCH --output="pas_weak_scaling_large.%j.%N.out"  
+#SBATCH --partition=compute  
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24  
+#SBATCH --export=ALL  
+#SBATCH -t 05:00:00
+
+module load intel/2015.2.164
+module load mvapich2_ib
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pas_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pas_output/
+
+mpirun -n 33 /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/pamap/pas-32.layout /oasis/scratch/comet/rbarnes1/temp_project/pas_output/w32_%n.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pas_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pas_output/
+
+mpirun -n 45 /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/pamap/pas-44.layout /oasis/scratch/comet/rbarnes1/temp_project/pas_output/w44_%n.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/pas_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/pas_output/
