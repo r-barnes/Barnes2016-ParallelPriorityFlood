@@ -1,0 +1,1 @@
+echo {1..38} | tr " " "\n" | xargs -n 1 sh -c 'head -n $0 srtm-39.layout > /z/srtm-$0.layout'
