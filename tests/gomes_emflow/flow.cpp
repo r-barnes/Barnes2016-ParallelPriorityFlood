@@ -40,8 +40,8 @@
 void writeFlowPgm(tiledMatrix_acc<int> &flow,const int nrows) ;
 using namespace std;
 
-int tilesWidth_Acc =  10000; // um tamanho que caiba na memoria junto com as bordas
-int tamMemoria_Acc = 1600; // memoria disponivel 
+int tilesWidth_Acc = 10000;  // um tamanho que caiba na memoria junto com as bordas
+int tamMemoria_Acc = 100000; // memoria disponivel 
 int numTilesMemoriaFlow_Acc = 1; // deixar sempre 1, pois o algoritmo so usa 1 bloco por vez
 int numTilesMemoria_Acc = 1; // deixar sempre 1, pois o algoritmo so usa 1 bloco por vez
 int tilesWidthFlowIndegree_Acc = tilesWidth_Acc;

@@ -73,8 +73,8 @@ void ptime(const char *const msg) {
 #define NEWA(var,type,size) { try  { if(0==(var=new type [(size)])) throw;} catch (...)  { cerr << "NEWA failed on " #var "=new " #type "[" #size "=" << (size) << "]" << endl; exit(1); }}
 
 
-int tilesWidth =  400;
-int tamMemoria = 1600;
+int tilesWidth = 400;
+int tamMemoria = 100000;
 const int TILE_CONECTED_COMPONENTS= 10;
 
 
