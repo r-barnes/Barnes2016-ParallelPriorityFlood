@@ -25,8 +25,12 @@ Acquire data from
 
 using, e.g., 
 
+    wget -r --no-parent --continue --no-clobber http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/
+
     lftp http://e4ftl01.cr.usgs.gov/SRTM/SRTMGL1.003/2000.02.11/
-    mirror -P 4 .
+    set ftp:use-mdtm off
+    set hftp:use-head off
+    mirror --ignore-time -P 4 -I '*.hgt.zip' .
 
 
 

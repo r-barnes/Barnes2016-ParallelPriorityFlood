@@ -19,7 +19,8 @@ Acquire data from
 
 using, e.g.,
 
-    wget -r --no-parent --continue --no-clobber http://dds.cr.usgs.gov/srtm/version2_1/SRTM1/
+    lftp http://dds.cr.usgs.gov/srtm/version2_1/SRTM1/
+    mirror .
 
 To unzip the files use, for example:
 

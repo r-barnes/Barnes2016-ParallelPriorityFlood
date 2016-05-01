@@ -7,8 +7,11 @@
 #SBATCH --export=ALL  
 #SBATCH -t 10:00:00
 
-module load boost/1.55.0
 module load intel/2015.2.164
 module load mvapich2_ib
 
-mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe -V -H many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_global/srtm_global_resampled.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_output/
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_output -delete; mkdir  /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_output
+
+mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_global/srtm_global_resampled.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_output/srtmg-%n.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_output -delete; mkdir  /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_output

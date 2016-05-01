@@ -5,10 +5,9 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=24  
 #SBATCH --export=ALL  
-#SBATCH -t 04:00:00
+#SBATCH -t 00:05:00
 
-module load boost/1.55.0
 module load intel/2015.2.164
 module load mvapich2_ib
 
-mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe -V -H many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_01.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/Region_01
+mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_01.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/Region_01
