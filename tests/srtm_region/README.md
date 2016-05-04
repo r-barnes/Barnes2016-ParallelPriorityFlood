@@ -3,11 +3,11 @@ Shuttle Radar Topography Mission (SRTM) Regional DEMs
 
 Stats
 -----
-Cells:       12,967,201  (per tile)
-Dimensions:  3601 x 3601 (per tile)
-Tiles:       152 - 169
-Total cells: 1,971,014,552 - 2,191,456,969
-Orientation: Flip tiles vertically and horizontally
+ * Cells:       12,967,201  (per tile)
+ * Dimensions:  3601 x 3601 (per tile)
+ * Tiles:       152 - 169
+ * Total cells: 1,971,014,552 - 2,191,456,969
+ * Orientation: Flip tiles vertically and horizontally
 
 
 

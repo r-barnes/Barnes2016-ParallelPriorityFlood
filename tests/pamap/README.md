@@ -4,11 +4,11 @@ This is a 3m DEM covering the entire state of Pennsylvania. TODO: Resolution che
 
 Stats
 -----
-Cells:       9,765,625   (per tile)
-Dimensions:  3125 x 3125 (per tile)
-Tiles:       6666 (North), 6723 (South)
-Total cells: 65,097,656,250 (North), 65,654,296,875 (South)
-Orientation: Flip tiles vertically
+ * Cells:       9,765,625   (per tile)
+ * Dimensions:  3125 x 3125 (per tile)
+ * Tiles:       6666 (North), 6723 (South)
+ * Total cells: 65,097,656,250 (North), 65,654,296,875 (South)
+ * Orientation: Flip tiles vertically
 
 
 

@@ -4,11 +4,11 @@ This is a 10m DEM covering the entire United States.
 
 Stats (for 10m DEM)
 -------------------
-Cells:       116,899,344     (per tile)
-Dimensions:  10812 x 10812   (per tile)
-Tiles:       1023
-Total cells: 119,588,028,912
-Orientation: Flip tiles vertically and horizontally
+ * Cells:       116,899,344     (per tile)
+ * Dimensions:  10812 x 10812   (per tile)
+ * Tiles:       1023
+ * Total cells: 119,588,028,912
+ * Orientation: Flip tiles vertically and horizontally
 
 
 
