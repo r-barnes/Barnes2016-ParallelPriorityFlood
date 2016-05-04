@@ -2,6 +2,12 @@ This is a clone of commit 0ca9e0ef0433cbd6097106385fdc99ab83b42e0d of
 "https://github.com/guipenaufv/EMFlow", only the relevant variables listed below
 have been changed.
 
+Run `make` to compile the program, the appropriate memory (2GB) and tile size
+(400x400) variables have already been set.
+
+gdal_merge.py
+gdal_translate -srcwin 0 0 40000 40000 input.raster output.raster
+
 
 
 EMFlow

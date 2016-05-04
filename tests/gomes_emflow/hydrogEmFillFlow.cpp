@@ -74,7 +74,7 @@ void ptime(const char *const msg) {
 
 
 int tilesWidth = 400;
-int tamMemoria = 100000;
+int tamMemoria = 2000;
 const int TILE_CONECTED_COMPONENTS= 10;
 
 
@@ -554,6 +554,10 @@ int main(const int argc, const char **argv) {
 	
 	//Flood depressions and Compute directions
 	 TIME(flood(elevs,dirs,nrows));
+
+	//Richard here. We don't perform any of the following operations because they
+	//relate to flow accumulation.
+	return 0;
 
 	//elevs.gravaStatVezes("elevsStats.pgm");
 	//dirs.gravaStatVezes("dirsStatsFlood.pgm");
