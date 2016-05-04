@@ -1,6 +1,6 @@
 Pennsylvania PAMAP DEM
 ======================
-This is a 3m DEM covering the entire state of Pennsylvania. TODO: Resolution check
+This is a 1m DEM covering the entire state of Pennsylvania.
 
 Stats
 -----
@@ -23,6 +23,9 @@ Plane zone “N” or “S.” The counties flown each year and the associated S
 Plane zones are illustrated on the map below. There is about one tile of overlap
 between the two zones.
 
+**NOTE:** Because PAMAP North and South tiles are in different projections they
+should not be mixed together!
+
 
 
 Acquisition
@@ -39,14 +42,3 @@ Web Resources
 -------------
  * http://www.dcnr.state.pa.us/topogeo/pamap/
  * http://www.dcnr.state.pa.us/topogeo/pamap/lidar/index.htm
-
-
-
-
-
-
-Running with `@offloadall` on `pan_tiles_small.job` had a Producer Overall time
-of 6.5891s for the 9 tiles.
-
-
-%NOTE: PAMAP North and South tiles cannot be mixed together!

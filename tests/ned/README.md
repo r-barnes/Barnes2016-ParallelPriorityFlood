@@ -29,6 +29,7 @@ ellipsoid, NAVD88 vertical datum, and GEOID03 National Geodetic Survey.
 Acquisition
 -----------
 Acquire data from:
+
     ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Elevation/13/IMG/
 
 After unpacking the NED tiles, grab only the files which begin with `imgn` and

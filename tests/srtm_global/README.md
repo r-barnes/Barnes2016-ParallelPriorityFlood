@@ -93,3 +93,16 @@ Delete any files for which you cannot calculate stats.
 If you're super paranoid, check stats on many files.
 
 Then, and only then, should you restart the job.
+
+Once everything is done, verify that you have the same number of `hgt` and `tif`
+files:
+
+    find -name "*hgt" | wc
+    find -name "*tif" | wc
+
+If not, there's a problem and you've got to figure it out.
+
+Another thing you can do is check that everything which the layout file expects
+is there:
+
+    cat srtm_global_resampled.layout | tr "," "\n" | sed '/^\s*$/d' | xargs -n1 ls | grep cannot
