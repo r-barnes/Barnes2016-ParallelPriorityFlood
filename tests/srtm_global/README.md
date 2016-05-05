@@ -1,5 +1,5 @@
-Shuttle Radar Topography Mission (SRTM) DEM
-===========================================
+Shuttle Radar Topography Mission (SRTM) Global DEM
+==================================================
 This is a 30m DEM covering the 80% of Earth's land area.
 
 Stats
