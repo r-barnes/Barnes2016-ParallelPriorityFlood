@@ -1,0 +1,17 @@
+#!/bin/bash  
+#SBATCH --job-name="taudem_test"  
+#SBATCH --output="taudem_test.%j.%N.out"  
+#SBATCH --partition=compute  
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24
+#SBATCH --export=ALL  
+#SBATCH -t 00:05:00
+
+module load intel/2015.2.164
+module load mvapich2_ib
+
+export LD_PRELOAD=$HOME/os/lib/libmpiP.so
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+mpirun -n 48 /usr/bin/time -v /home/rbarnes1/dist_pf/tests/taudem/pitremove -z /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_02/merged-cropped.tif -fel /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/mg_taudem_out.tif

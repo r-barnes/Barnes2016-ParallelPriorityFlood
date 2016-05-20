@@ -1,0 +1,18 @@
+#!/bin/bash  
+#SBATCH --job-name="taudem_dpf_test"  
+#SBATCH --output="taudem_dpf_test.%j.%N.out"  
+#SBATCH --partition=compute  
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24
+#SBATCH --export=ALL  
+#SBATCH -t 00:05:00
+
+module load intel/2015.2.164
+module load mvapich2_ib
+
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+export LD_PRELOAD=$HOME/os/lib/libmpiP.so
+
+mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe one @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_02/merged-cropped.tif /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/mg_pf_out-%n.tif -w 1000 -h 1000
