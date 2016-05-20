@@ -2,7 +2,7 @@ Shuttle Radar Topography Mission (SRTM) Regional DEMs
 =====================================================
 
 This is a small nine-tile subset of Region 3 which can be used for correctness
-testing of the algorithm. This layout file is called `srtm_r3_small.layout`.
+testing of the algorithm. This layout file is called `srtm_small.layout`.
 
 
 Testing
@@ -13,7 +13,10 @@ To set up the test use the following code to acquire and unpack the data files.
     #Make directory for data files
     mkdir small_test
 
-    #Download data files from the interwebs
+    #Unpack the small test using `lrzip`
+    lrzip -e small_test.tar.lrz
+
+    #ALTERNATIVELY: Download data files from the interwebs
     wget -O small_test/N40W088.hgt.zip http://dds.cr.usgs.gov/srtm/version2_1/SRTM1/Region_03/N40W088.hgt.zip
     wget -O small_test/N40W089.hgt.zip http://dds.cr.usgs.gov/srtm/version2_1/SRTM1/Region_03/N40W089.hgt.zip
     wget -O small_test/N40W090.hgt.zip http://dds.cr.usgs.gov/srtm/version2_1/SRTM1/Region_03/N40W090.hgt.zip
