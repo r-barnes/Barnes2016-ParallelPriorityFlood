@@ -1,0 +1,22 @@
+#!/bin/bash  
+#SBATCH --job-name="srtm_strong_scaling_large"  
+#SBATCH --output="srtm_strong_scaling_large.%j.%N.out"  
+#SBATCH --partition=compute  
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=24  
+#SBATCH --export=ALL  
+#SBATCH -t 05:00:00
+
+module load intel/2015.2.164
+module load mvapich2_ib
+
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+mpirun -n 33 /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_global/srtm-39.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ss33_%n.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+mpirun -n 40 /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_global/srtm-39.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ss40_%n.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete ; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/

@@ -1,0 +1,19 @@
+Método EMFlow:
+Implementação da tiledMatrix e divisão em ilha, o fluxo acumulado é feito pelo algoritmo CacheAwareAccumulation.
+Necessário configurar a quantidade de memória disponível (linha 77) e o tamanho da tiled (linha 76) no código fonte hydrogEmFillFlow.cpp 
+e necessário configurar a quantidade de memória disponível (linha 44) e o tamanho da tiled (linha 43) no código fonte flow.cpp.     
+
+Compilar:
+g++ -O3 -o EMFlow_Acc hydrogEmFillFlow.cpp lz4.c
+
+Executar:
+./EMFlow nrows terrain_name.hgt
+
+script:
+.criar pasta tiles para armazenar os tiles temporários, a pasta tiles é necessária para o funcionamento do programa
+.criar pasta tempos para armazenar os tempos 
+. Roda o programa pra varias instâncias e salva o tempo de execução 
+
+Resultado:
+
+Como resultado é dado o arquivo flow.hgt contendo o fluxo acumulado com 2 bytes.

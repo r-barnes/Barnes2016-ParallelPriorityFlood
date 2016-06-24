@@ -1,0 +1,38 @@
+#!/bin/bash  
+#SBATCH --job-name="gomes_test"  
+#SBATCH --output="gomes_test.%j.%N.out"  
+#SBATCH --partition=compute  
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=24
+#SBATCH --export=ALL  
+#SBATCH -t 02:00:00
+
+module load intel/2015.2.164
+module load mvapich2_ib
+
+export LD_PRELOAD=$HOME/os/lib/libmpiP.so
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/tiles
+mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/tempos
+
+ln -s /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/tiles ./tiles
+ln -s /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/tempos ./tempos
+
+/usr/bin/time -v /home/rbarnes1/dist_pf/tests/gomes_emflow/EMFlow 40000 /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_02/merged-cropped.tif
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+mpirun -n 2 /home/rbarnes1/dist_pf/parallel_pit_fill.exe one @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_02/merged-cropped.tif /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/out-%n.tif -w 400 -h 400
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+mpirun -n 2 /home/rbarnes1/dist_pf/parallel_pit_fill.exe one @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_02/merged-cropped.tif /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/out-%n.tif -w 4000 -h 4000
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
+mpirun -n 6 /home/rbarnes1/dist_pf/parallel_pit_fill.exe one @offloadall /oasis/scratch/comet/rbarnes1/temp_project/srtm_region/Region_02/merged-cropped.tif /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/out-%n.tif -w 4000 -h 4000
+
+find /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/ -delete; mkdir /oasis/scratch/comet/rbarnes1/temp_project/srtm_output/
+
