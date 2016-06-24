@@ -12,4 +12,4 @@ module load mvapich2_ib
 
 find /oasis/scratch/comet/rbarnes1/temp_project/ned_output/ -type f -delete
 
-mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @evict /oasis/scratch/comet/rbarnes1/temp_project/ned/IMG/ned_tiles.layout /oasis/scratch/comet/rbarnes1/temp_project/ned_output/%f.tif
+mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @evict /oasis/scratch/comet/rbarnes1/temp_project/ned/orig/ned_tiles.layout /oasis/scratch/comet/rbarnes1/temp_project/ned_output/%f.tif

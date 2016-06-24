@@ -1,6 +1,6 @@
 #!/bin/bash  
-#SBATCH --job-name="srtm_global_resampled"  
-#SBATCH --output="srtm_global_resampled.%j.%N.out"  
+#SBATCH --job-name="srtm_rg"  
+#SBATCH --output="srtm_rg.%j.%N.out"  
 #SBATCH --partition=compute  
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=24  
@@ -12,4 +12,4 @@ module load mvapich2_ib
 
 find /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_resampled_output -type f -delete
 
-mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @evict /oasis/scratch/comet/rbarnes1/temp_project/srtm_global/srtm_global_resampled.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_resampled_output/%f.tif
+mpirun /home/rbarnes1/dist_pf/parallel_pit_fill.exe many @evict /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_resampled/orig/srtm_global_resampled.layout /oasis/scratch/comet/rbarnes1/temp_project/srtm_global_resampled_output/%f.tif
