@@ -2,23 +2,26 @@ Barnes2016-DistributedPriorityFlood
 ===================================
 
 **Title of Manuscript**:
-Flexibly Distributed Priority-Flood Depression Filling For Teracell DEMs
+Parallel Priority-Flood Depression Filling For Trillion Cell Digital Elevation Models On Desktops Or Clusters
 
 **Authors**: Richard Barnes
 
 **Corresponding Author**: Richard Barnes (rbarnes@umn.edu)
 
-**DOI Number of Manuscript**
-TODO
+**DOI Number of Manuscript**:
+10.1016/j.cageo.2016.07.001
 
 **Code Repositories**
  * [Author's GitHub Repository](https://github.com/r-barnes/Barnes2016-ParallelPriorityFlood)
- * [Journal's GitHub Repository](TODO)
+ * [Journal's GitHub Repository](#TODO)
 
-This repository contains a reference implementation of the algorithms presented
-in the manuscript above, along with information on acquiring the various
-datasets used, and code to perform correctness tests.
+The algorithm described in the paper above has been implemented as part of the
+[RichDEM](https://github.com/r-barnes/richdem) terrain analysis suite. The suite
+is included here as a submodule; the code is accessible via the **src** link.
 
+Included in this directory is a **makefile** which will the aforementioned code.
+Also included is information for acquiring datasets and example jobs of how to
+run them. Code for correctness testing lives in **src**.
 
 
 
@@ -205,7 +208,7 @@ RichDEM
 This code is part of the RichDEM codebase, which includes state of the art
 algorithms for quickly performing hydrologic calculations on raster digital
 elevation models. The full codebase is available at
-[https://github.com/r-barnes](https://github.com/r-barnes)
+[https://github.com/r-barnes/richdem](https://github.com/r-barnes/richdem)
 
 
 
