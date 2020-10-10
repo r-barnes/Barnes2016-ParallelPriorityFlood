@@ -1,3 +1,5 @@
+## This repo is archived. Please use https://github.com/r-barnes/richdem for your research.
+
 Barnes2016-ParallelPriorityFlood
 ===================================
 
